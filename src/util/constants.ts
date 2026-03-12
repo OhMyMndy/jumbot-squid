@@ -1,0 +1,21 @@
+const TICKET_STATUS_OPEN = 352781547798528
+const TICKET_STATUS_CLOSED = 352786130075648
+
+
+const APPLICATION_ID = process.env.APPLICATION_ID as string
+const TICKETS_CATEGORY_ID = process.env.TICKETS_CATEGORY_ID as string
+const ROLE_ADMIN_ID = process.env.ROLE_ADMIN_ID as string
+const ROLE_HELPER_ID = process.env.ROLE_HELPER_ID as string
+const GUILD_ID = process.env.GUILD_ID as string
+const DISCORD_TOKEN = process.env.DISCORD_TOKEN as string
+
+export {
+  TICKET_STATUS_CLOSED,
+  TICKET_STATUS_OPEN,
+  TICKETS_CATEGORY_ID,
+  ROLE_ADMIN_ID,
+  ROLE_HELPER_ID,
+  GUILD_ID,
+  DISCORD_TOKEN,
+  APPLICATION_ID
+}
