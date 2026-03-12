@@ -26,6 +26,7 @@ export default {
 		}
 		if (interaction.isButton()) {
 			if (interaction.customId == "open-support-channel" && interaction.member && interaction.guild) {
+				await interaction.deferUpdate()
 				try {
 					let ticket = await client.request({
 						resource: "tickets",
@@ -40,7 +41,7 @@ export default {
 					})
 					// TODO: check if channel already exists
 					const channel = await interaction.guild?.channels.create({
-						name: `ticket-${ticket.data.data.id}`,
+						name: `ticket-${ticket.data.data.code}`,
 						type: ChannelType.GuildText,
 						parent: TICKETS_CATEGORY_ID,
 						// SEE: https://stackoverflow.com/questions/79434000/discord-js-v14-add-member-to-a-channel
@@ -52,6 +53,13 @@ export default {
 								],
 							},
 							{
+								id: interaction.applicationId,
+								allow: [
+									PermissionsBitField.Flags.ViewChannel,
+									PermissionsBitField.Flags.SendMessages,
+									PermissionsBitField.Flags.SendMessagesInThreads
+								]
+							}, {
 								id: interaction.member.user.id,
 								allow: [
 									PermissionsBitField.Flags.ViewChannel,
@@ -93,11 +101,10 @@ export default {
 							}
 						}
 					})
-					console.log(response.id)
 				} catch (e) {
 					console.error(`Error while creating support channel for ${interaction.member.user.id} ${interaction.member.user.username}: `, e)
 				}
-				await interaction.deferUpdate()
+
 			}
 		}
 	},
