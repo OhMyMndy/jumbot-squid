@@ -13,6 +13,7 @@ const DISCORD_TOKEN = process.env.DISCORD_TOKEN as string
 const INKLING_ROLE_ID = process.env.INKLING_ROLE_ID as string
 const SQUID_ROLE_ID = process.env.SQUID_ROLE_ID as string
 const ONLY_SQUIDS_ID = process.env.ONLY_SQUIDS_ID as string
+const JUMBO_SQUID_ID = process.env.JUMBO_SQUID_ID as string
 
 export {
   TICKET_STATUS_CLOSED,
@@ -25,5 +26,6 @@ export {
   APPLICATION_ID,
   INKLING_ROLE_ID,
   SQUID_ROLE_ID,
-  ONLY_SQUIDS_ID
+  ONLY_SQUIDS_ID,
+  JUMBO_SQUID_ID
 }
