@@ -24,8 +24,8 @@ export default {
 				const message = new ContainerBuilder().setAccentColor(0x0099ff)
 					.addTextDisplayComponents((textDisplay) =>
 						textDisplay.setContent(
-							`**Huh... what's happening?**\n\nIt seems like an **Inkling** is evolving!\n\n${user} has evolved from **Inkling** to **Squid**\n\n` +
-							`Welcome to the members area of the clan! We think you're a good fit and provide pleasant vibes. <3\n\n` +
+							`**Huh... what's happening?**\n\nIt seems like an **Inkling** is evolving!\n\n${user} has evolved from :seedling: **Inkling** to :droplet: **Squid**!\n\n` +
+							`Welcome to the members area of the clan! We think you're a good fit and provide pleasant vibes. :blue_heart:\n\n` +
 							`What colour heart would you like to have in-game?\n\n` +
 							`<:Trialist:1487854250892722336> Trialist <:Saviour:1487854264754765997> Saviour <:Pure:1487854185000210472> Pure <:Oracle:1487854136698474686> Oracle\n` +
 							`<:Medic:1487854112606261340> Medic <:Hero:1487854196681343136> Hero <:Epic:1487854209284968498> Epic <:Defiler:1487854223495528849> Defiler`
