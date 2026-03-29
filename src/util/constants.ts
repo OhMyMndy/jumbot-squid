@@ -9,6 +9,10 @@ const ROLE_HELPER_ID = process.env.ROLE_HELPER_ID as string
 const GUILD_ID = process.env.GUILD_ID as string
 const DISCORD_TOKEN = process.env.DISCORD_TOKEN as string
 
+
+const INKLING_ROLE_ID = process.env.INKLING_ROLE_ID as string
+const SQUID_ROLE_ID = process.env.SQUID_ROLE_ID as string
+
 export {
   TICKET_STATUS_CLOSED,
   TICKET_STATUS_OPEN,
@@ -17,5 +21,7 @@ export {
   ROLE_HELPER_ID,
   GUILD_ID,
   DISCORD_TOKEN,
-  APPLICATION_ID
+  APPLICATION_ID,
+  INKLING_ROLE_ID,
+  SQUID_ROLE_ID
 }
