@@ -36,6 +36,7 @@ export default {
 						flags: MessageFlags.Ephemeral
 					})
 
+					let member = interaction.guild?.members.cache.get(interaction.user.id)
 					const message = new ContainerBuilder().setAccentColor(0x0099ff)
 						.addTextDisplayComponents((textDisplay) =>
 							textDisplay.setContent(
@@ -44,7 +45,7 @@ export default {
 								`What colour heart would you like to have in-game?\n\n` +
 								`<:Trialist:1487854250892722336> Trialist <:Saviour:1487854264754765997> Saviour <:Pure:1487854185000210472> Pure <:Oracle:1487854136698474686> Oracle\n` +
 								`<:Medic:1487854112606261340> Medic <:Hero:1487854196681343136> Hero <:Epic:1487854209284968498> Epic <:Defiler:1487854223495528849> Defiler\n\n` +
-								`-# Verified by ${guildMember.nickname ?? interaction.user.globalName} and the Squiddie team.`
+								`-# Verified by ${member?.nickname ?? interaction.user.globalName} and the Squiddie team.`
 							),
 						)
 					const squidsChannel = interaction.client.channels.cache.get(ONLY_SQUIDS_ID)
